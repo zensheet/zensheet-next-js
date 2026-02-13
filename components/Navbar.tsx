@@ -32,6 +32,9 @@ export default function Navbar() {
                     <a href="#faq" className="text-sm font-medium text-gray-600 hover:text-teal-600 transition">
                         FAQ
                     </a>
+                    <a href="/blog" className="text-sm font-medium text-gray-600 hover:text-teal-600 transition">
+                        Blog
+                    </a>
                     <a
                         href="#contact"
                         className="px-5 py-2 text-sm font-bold bg-gray-900 text-white rounded-full hover:bg-teal-600 transition transform hover:-translate-y-0.5"
@@ -60,6 +63,9 @@ export default function Navbar() {
                     </a>
                     <a href="#faq" className="block py-2 text-gray-600 font-medium" onClick={() => setIsOpen(false)}>
                         FAQ
+                    </a>
+                    <a href="/blog" className="block py-2 text-gray-600 font-medium" onClick={() => setIsOpen(false)}>
+                        Blog
                     </a>
                     <a href="#contact" className="block py-2 text-teal-600 font-bold" onClick={() => setIsOpen(false)}>
                         Kontak Kami
