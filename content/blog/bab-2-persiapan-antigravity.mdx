@@ -1,0 +1,207 @@
+---
+title: 'Bab 2: Persiapan "Senjata" — Instalasi & Mengenal Antigravity App'
+date: '2026-03-06'
+excerpt: 'Di bab ini, kita langsung fokus menyiapkan satu-satunya alat tempur yang paling penting: Antigravity App. Ini adalah "bengkel" tempat kita akan menyuruh AI bekerja. Plus, tips memilih model AI yang tepat dan cara hemat kuota gratis.'
+author: 'Rifai'
+tags: ['Antigravity', 'AI', 'Setup', 'Tutorial', 'Pemula']
+coverImage: '/blog/antigravity/cover_final_v2.png'
+---
+
+Di bab ini, kita akan langsung fokus menyiapkan satu-satunya alat tempur yang paling penting: **Antigravity App**.
+
+Ini adalah "bengkel" tempat kita akan menyuruh AI bekerja. Tanpa ini, kode-kode yang dibuat AI cuma akan jadi teks bisu yang nggak bisa dipakai.
+
+---
+
+## Cara Install Antigravity App
+
+Ikuti panduan langkah demi langkah ini. Tenang, cuma butuh waktu 5 menit.
+
+### Langkah 1: Cari di Google
+
+Buka Google, ketikan kata kunci: **"antigravity google"**.
+
+Pilih hasil pencarian paling atas yang mengarah ke `antigravity.google`.
+
+![Google Search Antigravity](/blog/antigravity/google_search_antigravity.png)
+
+### Langkah 2: Download
+
+Begitu masuk ke website resminya, cari tombol **Download** di pojok kanan atas (atau di tengah halaman). Klik tombol tersebut.
+
+![Tombol Download](/blog/antigravity/download_button_antigravity.png)
+
+### Langkah 3: Pilih Versi Windows (PENTING!)
+
+Nah, di sini biasanya banyak yang bingung. Akan muncul pilihan untuk MacOS, Windows, dan Linux.
+
+Karena kita pengguna Windows, perhatikan bagian **Windows**. Di sana ada pilihan "Download for x64" dan "Download for ARM64".
+
+**Pilih yang: Download for x64.**
+
+![Pilih Versi x64](/blog/antigravity/platform_selection_antigravity.png)
+
+> **"Mas, x64 itu apa sih?"**
+>
+> Penjelasan singkatnya: **x64** adalah arsitektur prosesor standar yang dipakai oleh hampir semua laptop/PC Windows (Intel atau AMD) modern. Kalau laptopmu beli tahun 2010 ke atas, 99% pasti x64.
+>
+> Jadi nggak usah pusing mikirin teknisnya. Pokoknya klik **x64**.
+
+### Langkah 4: Install
+
+Setelah file ter-download (biasanya berakhiran `.exe` atau `.msi`), klik dua kali file tersebut. Ikuti saja instruksinya (Next, Next, Install) sampai selesai.
+
+Begitu selesai, buka aplikasinya. Selamat! Bengkel ajaibmu sudah siap.
+
+---
+
+## Mengenal Interface Antigravity
+
+Sebelum mulai bekerja, ada baiknya kita kenali dulu tampilan Antigravity.
+
+### Dua Panel Utama
+
+Begitu aplikasi terbuka, Anda akan melihat layar terbagi menjadi dua bagian besar:
+
+![Tampilan 2-Panel Antigravity](/blog/antigravity/ui_antigravity/01_two_panel_interface.png)
+
+**Panel Kiri: Workspace (Area Kerja)**
+
+Ini tempat di mana kode dan file project Anda ditampilkan. Ada dua tab:
+
+- **Code**: Menampilkan source code (HTML, CSS, JavaScript, dll)
+- **Preview**: Menampilkan hasil aplikasi yang sedang dibuat
+
+Fokus Anda di panel kiri ini adalah untuk **MELIHAT HASIL**, bukan edit manual. Biarkan AI yang ngurusin code-nya.
+
+**Panel Kanan: Chat (Obrolan dengan AI)**
+
+Ini adalah tempat Anda mengetik perintah. Interface-nya mirip WhatsApp:
+
+- Ada kolom kecil di bawah untuk menulis prompt
+- AI akan merespons di atas kolom tersebut
+- Conversation history tersimpan, bisa scroll ke atas untuk lihat percakapan sebelumnya
+
+---
+
+## Workflow: Accept, Reject, atau Always Proceed?
+
+Saat AI selesai memproses request Anda dan menghasilkan code, biasanya akan muncul notifikasi yang menanyakan persetujuan.
+
+![Accept Button Workflow](/blog/antigravity/ui_antigravity/02_accept_button.png)
+
+Anda akan melihat 2 pilihan utama:
+
+- **"Accept"** (biru) — Klik ini kalau Anda setuju dengan perubahan yang diusulkan AI
+- **"Reject all"** — Klik ini kalau Anda tidak setuju dan ingin batalkan perubahan
+
+**Tip Praktis:** Untuk project pembelajaran atau eksperimen, biasanya langsung klik **Accept** saja. AI jarang ngasih code yang merusak. Kalau ada bug, nanti tinggal minta AI buat fix lagi.
+
+### Opsi "Always Proceed" untuk Workflow Lebih Cepat
+
+Kalau Anda merasa bolak-balik klik Accept itu memperlambat workflow, ada solusinya:
+
+![Always Proceed Option](/blog/antigravity/ui_antigravity/05_always_proceed.png)
+
+Pada notification box, ada opsi **"Always Proceed"** — ketika Anda enable ini, AI akan otomatis apply semua perubahan tanpa konfirmasi lagi.
+
+**Kapan pakai Always Proceed?**
+- Ketika Anda sedang iterasi cepat (testing ide, coba-coba fitur)
+- Ketika Anda percaya diri dengan prompt yang Anda berikan
+
+**Kapan JANGAN pakai Always Proceed?**
+- Ketika project sudah production/dipakai orang lain
+- Ketika Anda masih belajar dan ingin tahu apa yang AI ubah
+
+---
+
+## Troubleshooting: Masalah Umum dan Solusinya
+
+### 1. Stuck di "Running..." Tidak Bergerak
+
+![Running Stuck Issue](/blog/antigravity/ui_antigravity/04_running_stuck.png)
+
+**Masalah:** Anda lihat tulisan "Running..." di bawah layar, tapi tidak ada progress sama sekali.
+
+**Penyebab:** Biasanya ini karena ada **Accept button yang belum diklik** di atas.
+
+**Solusi:** Scroll ke atas di panel chat → Cari kotak biru "Accept" → Klik "Accept"
+
+### 2. Error "Agent Terminated Due to Error"
+
+![Retry Button for Connection Error](/blog/antigravity/ui_antigravity/06_retry_error.png)
+
+**Penyebab:** Koneksi internet terputus, server AI overload, atau request terlalu kompleks.
+
+**Solusi:** Klik tombol **"Retry"** (biru) di pojok kanan bawah notification.
+
+Kalau masih error setelah 2-3x retry:
+- Refresh browser/restart Antigravity
+- Cek koneksi internet
+- Coba ganti model AI (misal dari Gemini ke Claude)
+- Sederhanakan prompt (pecah jadi beberapa step kecil)
+
+### 3. Quota Limit Habis
+
+![Quota Limit Error](/blog/antigravity/ui_antigravity/03_quota_limit.png)
+
+**Masalah:** Muncul error "You have reached the quota limit for this model"
+
+**Solusi:**
+- **Ganti model lain** — Kalau Gemini 3 Pro habis, coba pakai Claude Sonnet
+- **Tunggu reset** — Quota akan reset sesuai periode (harian/mingguan)
+- **Pakai model lebih hemat** — Untuk task sederhana, pakai Gemini Flash
+
+---
+
+## Memilih "Otak" AI (PENTING!)
+
+Di bagian bawah aplikasi, kamu akan melihat menu pilihan **Model AI**.
+
+![Model Selector UI](/blog/antigravity/model_selector_ui.png)
+
+Saat ini ada 3 "Dewa AI" utama:
+
+- **Gemini** (Buatan Google)
+- **Claude** (Buatan Anthropic)  
+- **GPT** (Buatan OpenAI)
+
+> **Saran Saya: Pakai saja "Gemini 3".**
+>
+> Kenapa? **Cepat & Pintar:** Cocok banget buat koding sehari-hari. Dan yang paling penting: **GRATIS.**
+
+### Panduan Memilih Model:
+
+| Model | Kapan Pakai | Kuota |
+|---|---|---|
+| Gemini 3 Flash / Low | Sehari-hari, styling, fitur simpel | Reset harian |
+| Gemini 3 Pro High | Kalau Flash mulai "bego" atau error terus | Reset mingguan |
+| Claude / Thinking | Mentok total, logika bisnis super rumit | Sangat sedikit (harian) |
+
+> **Strategi Hemat:** Mulai dulu pakai yang **Low/Flash**. Kalau error, baru naik kelas ke **High**. Kalau masih error, panggil sang **Profesor (Thinking)**.
+
+---
+
+## Rahasia "Premium Gratisan" (Gemini Advanced)
+
+Saat buku ini ditulis, Google menawarkan paket **Gemini Advanced** seharga **Rp 309.000 / bulan**.
+
+Tapi tenang, biasanya ada **Free Trial 30 Hari Pertama**.
+
+> **Tips "Nakal" Hemat Budget:**
+>
+> Promosi ini berlaku per akun Google.
+>
+> Jadi, kalau masa trial 30 harimu habis dan kamu belum rela bayar...
+>
+> 1. Bikin akun Google (Gmail) baru.
+> 2. Login ulang di Antigravity pakai akun baru itu.
+> 3. **Boom!** Dapat gratis 30 hari lagi.
+>
+> *(Jangan bilang siapa-siapa ya, ini rahasia kita aja.)*
+
+---
+
+Mari kita mulai "mempekerjakan" mereka!
+
+**Bab selanjutnya:** [Bab 3 — Cara Kerja & Jalan Pintas →](/blog/bab-3-cara-kerja-jalan-pintas)

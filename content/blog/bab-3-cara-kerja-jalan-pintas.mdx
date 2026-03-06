@@ -1,0 +1,136 @@
+---
+title: 'Bab 3: Cara Kerja & Jalan Pintas — Jangan Dilihat Kodenya, Nanti Pusing'
+date: '2026-03-05'
+excerpt: 'Kalau di bab sebelumnya kita sudah setup "Senjata", sekarang kita belajar cara menembaknya. Workflow kanan-kiri, tips hemat kuota, dan kamus file-file aneh yang akan muncul di folder proyek kamu.'
+author: 'Rifai'
+tags: ['Antigravity', 'AI', 'Workflow', 'Tips', 'Produktivitas']
+coverImage: '/blog/antigravity/cover_final_v2.png'
+---
+
+Kalau di bab sebelumnya kita sudah setup "Senjata", sekarang kita belajar cara menembaknya.
+
+## Workflow: Kanan (Perintah) → Kiri (Hasil)
+
+Karena layarmu cuma dua kolom, anggap saja ini seperti **Remote TV** dan **Layar TV**.
+
+![Tampilan Antigravity App](/blog/antigravity/app_overview_updated.png)
+
+- **Kanan (Remote):** Tempat kamu pencet-pencet (ngetik prompt).
+- **Kiri (Layar TV):** Tempat kamu nonton hasilnya.
+
+### Langkah 1: Memerintah (Kolom Kanan)
+
+Di kolom Chat, ketik keinginanmu:
+
+> "Buatkan saya kalkulator sederhana."
+
+### Langkah 2: Layar Kiri Berubah ("Tukang" Bekerja)
+
+Otomatis layar sebelah kiri akan bergerak sendiri. AI sedang menulis kode.
+
+**PENTING: Tombol REVIEW (Accept/Reject)**
+
+Kadang-kadang, AI akan berhenti sejenak dan meminta persetujuanmu. Akan muncul tombol **Accept** (Terima) atau **Reject** (Tolak).
+
+![Tombol Accept Reject](/blog/antigravity/accept_reject_ui.png)
+
+Bingung harus ngapain?
+
+> **JURUS GASPOL:** Langsung klik **Accept** (atau tekan `Alt + Enter`).
+
+Nggak usah dibaca kodenya. Percaya saja sama "tukang"-nya. Kalau nanti hasilnya salah, tinggal kita marahi lagi.
+
+### Langkah 3: Munculkan Hasil (Preview)
+
+Tujuan kita adalah melihat aplikasinya, bukan kodenya.
+
+Biasanya AI akan otomatis mengubah layar kiri jadi Preview (Tampilan Aplikasi).
+
+Tapi kalau layar kirinya masih nyangkut di kode, kamu harus menegurnya. Ketik di chat kanan:
+
+> **"Tolong bukakan aplikasinya."**
+>
+> atau
+>
+> **"Mana preview-nya?"**
+
+AI akan otomatis "mengganti channel" di layar kiri dari Mode Kode ke Mode Preview.
+
+---
+
+## Tips Pro: Jangan "Buta Map" (Hemat Kuota)
+
+Satu kesalahan fatal pemula: **Menyuruh AI bikin aplikasi yang kamu sendiri gak paham logikanya.**
+
+Kalau kamu gak tau maunya apa, AI akan "mengarang bebas". Hasilnya? Error, ngaco, dan kamu stress sendiri.
+
+**Saran Saya:** Sebelum buka Antigravity, **BRAINSTORMING DULU.**
+
+Matangkan dulu konsepnya. Mau fitur apa? Alurnya gimana?
+
+Diskusi sama siapa? Ya sama AI juga!
+
+> **Trik Hemat Limit:**
+>
+> Karena Antigravity (Gemini 3) ada kuota/limitnya, sayang kalau dipakai cuma buat ngobrol ngalor-ngidul.
+>
+> Mending brainstorming-nya dilakukan di **Luar Aplikasi** (pakai Chrome biasa).
+>
+> Buka **[ChatGPT.com](https://chatgpt.com)** atau **[Gemini.google.com](https://gemini.google.com)**.
+>
+> *"Bro AI, saya punya ide bikin aplikasi kasir. Kira-kira butuh fitur apa aja ya biar simpel tapi kepakai?"*
+>
+> Diskusi sampai matang di sana. Begitu konsep sudah jadi dan kamu paham logikanya, baru bawa ke Antigravity untuk dieksekusi.
+>
+> **Hemat kuota, hati tenang, hasil maksimal.**
+
+---
+
+## Tips Pro 2: Pilih Mode "Planning" (Biar Gak Bolak-Balik)
+
+Di sebelah kiri kolom chat, ada menu kecil bertuliskan **Mode**.
+
+![Planning vs Fast Mode](/blog/antigravity/planning_vs_fast_ui.png)
+
+Ada dua pilihan:
+
+- **Fast (Cepat):** AI langsung "hajar" nulis kode. Kalau salah, ya salah.
+- **Planning (Perencanaan):** AI akan mikir dulu, bikin rencana, dan nanya ke kamu: *"Bos, saya mau bikin gini, setuju gak?"*
+
+**Saran Saya:** Gunakan selalu **PLANNING MODE.**
+
+Kenapa? Karena AI akan menampilkan preview rencananya dulu sebelum buang-buang "tenaga" (kuota) buat nulis kode.
+
+Kalau rencananya salah, kamu bisa koreksi di awal. Ini jauh lebih hemat limit daripada pakai mode Fast → Salah → Ulangi → Habis Limit.
+
+---
+
+## Kamus Istilah (File-File Aneh)
+
+Selama proses pembuatan, kamu mungkin akan melihat file-file aneh bermunculan di foldermu. Nggak usah panik, ini artinya:
+
+### File Laporan (Dokumen Proyek)
+
+Ini adalah file komunikasi antara kamu ("Bos") dan AI ("Mandor").
+
+| File | Fungsi |
+|---|---|
+| `task.md` | **Daftar Tugas** (To-Do List). Checklist apa saja yang harus dikerjakan AI. |
+| `implementation_plan.md` | **Proposal Rencana**. AI bikin rencana dulu di sini. Kalau kamu setuju, baru dia kerjakan. |
+| `walkthrough.md` | **Laporan Pertanggungjawaban**. Setelah selesai kerja, AI akan nulis: "Bos, saya sudah ngerjain A, B, C. Hasilnya begini." |
+
+### File Bangunan (Kodingan)
+
+Ini adalah bahan bangunan aplikasimu.
+
+| File | Fungsi |
+|---|---|
+| `index.html` | **Bangunan Utama**. Kalau mau buka aplikasi, cari file ini. |
+| `style.css` | **Cat & Dekorasi**. Warna, font, tata letak, semuanya diatur di sini. |
+| `app.js` | **Listrik & Otak**. Yang bikin tombol bisa diklik, hitungan bisa jalan. |
+
+**Kesimpulan:** Kalau kamu bingung, cukup cari **`index.html`**. Itu adalah pintunya. Sisanya? Biar AI yang urus.
+
+---
+
+**Bab selanjutnya:** [Bab 3.5 — Melihat Proses Sebenarnya: Brainstorming sampai Debugging →](/blog/bab-3-5-proses-nyata-dr-anti-bokek)

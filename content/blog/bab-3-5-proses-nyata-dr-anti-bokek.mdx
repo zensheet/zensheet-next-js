@@ -1,0 +1,194 @@
+---
+title: 'Bab 3.5: Melihat Proses Sebenarnya — Brainstorming sampai Debugging'
+date: '2026-03-04'
+excerpt: 'Dokumentasi nyata ketika saya membuat aplikasi "Dr. Anti Bokek" — sebuah personal finance tracker. Dari brainstorming bersama AI, approval planning, implementation, sampai debugging dengan screenshot. Tidak ada yang di-edit, persis seperti ini lah cara kerjanya.'
+author: 'Rifai'
+tags: ['Antigravity', 'AI', 'Studi Kasus', 'Debugging', 'Finance App']
+coverImage: '/blog/antigravity/cover_final_v2.png'
+---
+
+Di bab sebelumnya saya sudah menjelaskan teori tentang bagaimana berkomunikasi dengan AI. Sekarang saya ingin menunjukkan **seperti apa proses sebenarnya** ketika membuat aplikasi — dari awal sampai selesai.
+
+Ini adalah dokumentasi nyata ketika saya membuat aplikasi **"Dr. Anti Bokek"** — sebuah personal finance tracker untuk tracking keuangan harian. Semua screenshot di sini adalah capture asli dari percakapan saya dengan Antigravity.
+
+---
+
+## Apa itu Dr. Anti Bokek?
+
+**Dr. Anti Bokek** adalah aplikasi web sederhana untuk membantu saya mengelola keuangan personal sehari-hari.
+
+**Masalah yang ingin diselesaikan:**
+
+- Saya punya budget bulanan yang sudah terstruktur (fixed expenses, wants, savings)
+- Tapi saya kesulitan tracking pengeluaran **harian** — apakah saya masih "on track" atau sudah "tekor"
+- Kadang di akhir bulan baru sadar ternyata sudah overspending
+
+**Solusi yang diusulkan AI:**
+
+- Dashboard keuangan yang menampilkan "Jatah Harian" (daily allowance)
+- Input cepat untuk catat pengeluaran dengan "Fast Action Button" (tombol Suntik 💉)
+- Feedback real-time: masih "Lebih Hemat" atau sudah "Tekor"
+- Gamifikasi dengan komentar "Dokter" yang kasih saran
+
+Ini bukan aplikasi kompleks seperti Mint atau YNAB. Ini tool personal yang sangat spesifik untuk kebutuhan saya — **tracking harian dengan mindful spending.**
+
+Dan saya membuatnya **tanpa menulis satu baris code pun secara manual.** Semua dikerjakan AI.
+
+---
+
+## 1. Brainstorming: Meminta IDE dari AI
+
+Saya tidak selalu tahu persis aplikasi seperti apa yang saya butuhkan. Kadang saya hanya punya problem statement yang samar-samar.
+
+Jadi saya mulai dengan bertanya ke AI:
+
+![Brainstorming Phase - Meminta IDE](/blog/antigravity/workflow_drab/01_brainstorming.png)
+
+*"Saya punya ide untuk aplikasi tracking keuangan harian yang bisa sinkron dengan worksheet budgeting bulanan. Kamu ada ide untuk brainstorming?"*
+
+Yang menarik: saya tidak langsung minta "buatkan aplikasi X dengan fitur Y dan Z".
+
+Saya minta AI untuk ikut **berpikir** bersama saya mengenai konsep yang tepat.
+
+---
+
+## 2. AI Memberikan Planning Detail
+
+Setelah memahami problem statement saya, AI tidak langsung ngoding. AI memberikan proposal konsep terlebih dahulu:
+
+![AI Planning Response - Concept Breakdown](/blog/antigravity/workflow_drab/02_ai_planning.png)
+
+Di sini AI menyarankan konsep "Rawat Jalan Harian" — sebuah metode tracking pengeluaran harian yang bisa di-bridge ke monthly budgeting.
+
+Perhatikan detailnya:
+
+- Fast Action Button untuk input cepat
+- Gamifikasi "Daily Allowance" dengan visual feedback
+- Komentar "Dokter" yang memberikan saran
+- Dashboard progress Budget vs Kenyataan
+
+Saya bahkan tidak memikirkan semua itu di awal. **AI yang mengusulkan.**
+
+---
+
+## 3. Approval dan Implementation Plan
+
+Setelah membaca proposal AI, saya merasa konsepnya bagus. Jadi saya approve:
+
+*"Ide menarik, Bro! Market 'pencatatan detail' memang lebih mindful. Mari kita eksekusi dengan Rawat Jalan Harian concept."*
+
+Kemudian AI membuat implementation plan yang lebih teknis:
+
+![Approval & Implementation Plan](/blog/antigravity/workflow_drab/03_approval_plan.png)
+
+AI secara otomatis membuat file `implementation_plan.md` yang berisi:
+
+- UI Baru: Tombol Suntik (FAB), Panel Jatah Harian, Modal Input
+- Logika Gamifikasi: Sistem hitung budget per hari
+- Integrasi dengan code existing
+
+Yang penting untuk dicatat: **saya tidak perlu tahu detail teknis ini.**
+
+AI yang membuat planning, saya hanya perlu "oke gas" atau "tunggu, ini perlu diubah".
+
+---
+
+## 4. Implementation: Fitur Ditambahkan
+
+Setelah plan disetujui, AI mulai mengimplementasikan fitur-fitur tersebut:
+
+![Implementation Summary](/blog/antigravity/workflow_drab/04_implementation.png)
+
+Dalam beberapa menit, AI sudah selesai menambahkan:
+
+- Tombol Suntik (Fast Action Button) dengan icon jarum
+- Gamifikasi Dokter dengan real-time feedback
+- Jatah Harian Card yang menampilkan sisa budget
+
+Saya hanya scroll membaca summary-nya. Belum ngecek hasilnya di browser.
+
+---
+
+## 5. Testing & Debugging: Ketika Ada Error
+
+Ini bagian yang paling penting untuk dipahami: **tidak selalu langsung sempurna.**
+
+Saat saya buka hasil code-nya di browser dan tekan F12 (Chrome DevTools), saya melihat ada error:
+
+![Debugging Phase - Screenshot Error Console](/blog/antigravity/workflow_drab/05_debugging.png)
+
+Error: `formatMoney is not defined`
+
+Daripada saya coba cari-cari code mana yang salah atau googling "how to fix formatMoney error", saya langsung **screenshot console error-nya** dan paste ke Antigravity dengan caption:
+
+> *"banyak banget bug nya"*
+
+Dan dalam beberapa detik, AI langsung:
+- Mendeteksi error dari screenshot (fungsi `formatMoney` belum didefinisikan)
+- Mengidentifikasi akar masalahnya
+- Memperbaiki code
+- Menjelaskan apa yang diperbaiki
+
+Hasilnya: error hilang. Simulasi "Harga sebelum & sesudah" muncul normal.
+
+---
+
+## Pelajaran dari Proses Ini
+
+### 1. Brainstorming Bersama AI Itu Valuable
+
+Saya tidak perlu datang dengan design document yang sempurna. AI bisa membantu mematangkan ide yang masih mentah.
+
+Yang saya lakukan hanya **menjelaskan masalah saya dengan jujur**. AI yang suggest solusi.
+
+### 2. Approval Loop Membuat Saya Tetap Kontrol
+
+AI tidak langsung ngerjakan tanpa konfirmasi. Ada fase:
+
+- Proposal Concept → Saya review → Approve/Revise
+- Implementation Plan → Saya review → Proceed
+- Code Generated → Saya test → Report bugs (kalau ada)
+
+Jadi saya tetap yang pegang kendali, bukan AI yang ngacak-ngacak.
+
+### 3. Debugging Itu Mudah dengan Screenshot
+
+Tidak perlu paham error message yang cryptic. **Screenshot console → paste → AI fix.**
+
+Ini menurunkan barrier untuk pemula. Kita tidak perlu "lancar bahasa error".
+
+### 4. Proses Iteratif, Bukan One-Shot Perfect
+
+Aplikasi tidak langsung jadi sempurna. Ada phases:
+
+1. User ask
+2. AI propose
+3. User review
+4. AI implement
+5. User test
+6. (kalau ada bug) User screenshot → AI fix
+
+Dan itu normal. Yang penting prosesnya smooth.
+
+---
+
+## Kesimpulan
+
+Ini adalah dokumentasi nyata dari proses saya membuat aplikasi. Tidak di-edit, tidak di-shortcut. Persis seperti ini lah cara kerjanya.
+
+Dan yang perlu saya lakukan hanyalah:
+- **Menjelaskan masalah** dengan jelas
+- **Membaca proposal** AI dengan teliti
+- **Testing hasil** dengan jujur (screenshot kalau ada bug)
+
+Tidak ada satu baris code pun yang saya tulis manual.
+
+Tidak ada satu error message pun yang saya debug sendiri.
+
+Semua yang saya butuhkan adalah kemampuan untuk **berkomunikasi masalah dengan baik.**
+
+Itu saja.
+
+---
+
+**Bab selanjutnya:** [Bab 4 — Studi Kasus: Kalkulator UPS yang "Mustahil" Dikoding Manual →](/blog/bab-4-studi-kasus-kalkulator-ups)

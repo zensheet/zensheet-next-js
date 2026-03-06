@@ -1,0 +1,173 @@
+---
+title: 'Bab 4: Studi Kasus — Kalkulator UPS yang "Mustahil" Dikoding Manual'
+date: '2026-03-03'
+excerpt: 'Kalkulator rate UPS dengan 14 conditional logic yang saling terkait. Kalau saya harus belajar coding dari nol untuk bikin ini, mungkin butuh berbulan-bulan. Tapi dengan pendekatan Antigravity, selesai dalam waktu singkat — karena saya paham masalahnya, bukan karena jago coding.'
+author: 'Rifai'
+tags: ['Antigravity', 'AI', 'Studi Kasus', 'Logistik', 'Kalkulator']
+coverImage: '/blog/antigravity/cover_final_v2.png'
+---
+
+Saya ingin berbagi pengalaman membuat sebuah aplikasi yang, sejujurnya, **tidak mungkin saya buat sendiri dengan cara tradisional.**
+
+Ini adalah kalkulator rate UPS dengan **14 conditional logic yang saling terkait.** Kalau saya harus belajar coding dari nol untuk bikin ini, mungkin butuh berbulan-bulan.
+
+Tapi dengan pendekatan "Antigravity", saya bisa menyelesaikannya dalam waktu yang jauh lebih singkat.
+
+Bukan karena saya jago coding. Tapi karena **saya paham masalahnya dengan baik.**
+
+---
+
+## Memahami Kompleksitas
+
+Sebelum mulai, saya ingin menunjukkan seberapa rumit aplikasi yang dimaksud. Ini bukan aplikasi "Hello World", tapi tool yang saya gunakan sehari-hari di bisnis logistik saya.
+
+Berikut ini adalah planning notes saya saat pertama kali memikirkan aplikasi ini:
+
+### Requirement Planning (Dokumentasi Asli)
+
+![Planning Part 1 - 7 Poin Pertama](/blog/antigravity/bab4_ups_calc/01_planning_part1.png)
+
+*Ini baru 7 poin pertama dari total 14 requirement yang harus dipenuhi.*
+
+![Planning Part 2 - Surcharge Tambahan](/blog/antigravity/bab4_ups_calc/02_planning_part2.png)
+
+*Belum selesai. Ada Fuel Surcharge Index yang update mingguan, konversi mata uang untuk berbagai region...*
+
+![Planning Part 3 - Logika Final](/blog/antigravity/bab4_ups_calc/03_planning_part3.png)
+
+*Dan baru selesai di poin 14. Ada chargeable weight, volume weight, conditional collies, negara origin-destination...*
+
+### Apa yang Membuat Ini Kompleks?
+
+Dari requirement di atas, aplikasi ini membutuhkan:
+
+- Perhitungan berat actual vs volumetric (ambil yang lebih besar)
+- Deteksi jenis package otomatis (box vs non-box)
+- Kalkulasi Length + Girth dengan multiple threshold
+- Multi-tier pricing dengan nested conditions
+- Service-specific rules (UPS Saver ≠ WWEF ≠ Expedited)
+- Auto-add surcharge untuk import shipment
+- Input manual untuk basic rate dan FSI index
+- Dropdown dengan 10+ opsi additional surcharge
+- Konversi mata uang multi-region
+- Weight/dimension converter otomatis
+- Dual mode calculator (per kg vs per collie)
+- Formula total calculation dengan 6+ komponen
+- Conditional minimum chargeable weight
+- Auto show/hide fields berdasarkan service selection
+
+Kalau saya harus menulis semua logika if-else-nya manual, saya bahkan tidak tahu dari mana harus mulai.
+
+---
+
+## Pendekatan yang Saya Ambil
+
+Saya tidak memikirkan "bagaimana cara ngoding ini." Saya hanya fokus pada satu pertanyaan:
+
+> **"Apa yang harus terjadi?"**
+
+Saya sudah paham betul aturan bisnis UPS. Saya tahu kapan surcharge Additional Handling berlaku, kapan Large Package dikenakan, bagaimana menghitung chargeable weight.
+
+Jadi saya tinggal menuliskan apa yang saya tahu, dalam bahasa yang saya pahami.
+
+### Prompt yang Saya Gunakan
+
+```
+Buatkan kalkulator rate UPS dengan deskripsi:
+- jika actual berat (bukan volumetric) >25 kg <71 kg, maka terkena AHS
+  (additional handling surcharge) sebesar IDR 243,460 / collie
+- jika jenis package selain box (misal drum, silinder), maka akan terkena AHS
+  sebesar IDR 243,460 / collie
+- jika gabungan Length + Girth (2 x Lebar + 2 x tinggi) >300 <400 maka akan
+  terkena LPS(Large Package Surcharge) sebesar IDR 1,058,200 / collie dan secara
+  otomatis menjadikan minimum chargeable weight menjadi 40 kg / collie, serta
+  menghilangkan AHS surcharge sebesar IDR 243,460 / collie
+[... seterusnya sampai poin 14]
+```
+
+Cukup itu saja. Saya tidak perlu tahu syntax `if-else`, tidak perlu tahu cara buat dropdown, tidak perlu tahu gimana caranya auto-hide field.
+
+**AI yang mengurus semua detail teknis tersebut.**
+
+---
+
+## Proses Pengerjaan
+
+Setelah mengirim requirement lengkap ke AI:
+
+- AI membaca dan memahami semua 14 poin logika
+- AI menulis kode dengan ratusan baris conditional statement
+- AI membuat UI yang clean dan responsif
+- AI mengimplementasikan semua rumus perhitungan
+
+Saya? Hanya menunggu sambil membaca penjelasan yang diberikan AI tentang apa yang sedang dibuatnya.
+
+---
+
+## Hasil dan Pengujian
+
+Aplikasi selesai dalam hitungan menit. Saya langsung test dengan data real dari customer:
+
+**Test 1: Berat 30kg**
+- Expected: Kena AHS (>25kg) = Rp 243,460
+- Result: ✅ Benar
+
+**Test 2: Dimensi 120x60x60cm (Length+Girth = 360cm)**
+- Expected: Kena LPS (>300) = Rp 1,058,200 + auto min weight 40kg + AHS hilang
+- Result: ✅ Benar, bahkan AHS otomatis terhapus
+
+**Test 3: Import shipment**
+- Expected: Auto-add brokerage Rp 112,890/AWB
+- Result: ✅ Benar
+
+Semua 14 poin logika berjalan sempurna.
+
+---
+
+## Iterasi dan Perbaikan
+
+Saat testing, saya menemukan ada yang kurang: field untuk tracking number.
+
+Saya tinggal menambahkan satu kalimat:
+
+> "Tambahin field input 'Tracking Number' di bagian atas form."
+
+10 detik kemudian, field baru muncul. Terintegrasi dengan baik dengan code yang sudah ada.
+
+Kemudian saya ingat perlu tombol "Reset":
+
+> "Tambahin tombol 'Reset' untuk clear semua field."
+
+15 detik kemudian, tombol "Reset" ditambahkan dan berfungsi sempurna.
+
+Ini yang saya maksud dengan "iterasi tanpa kerumitan". **Tinggal ngomong, langsung jadi.**
+
+---
+
+## Pelajaran yang Saya Ambil
+
+### Yang Penting Bukan Skill Coding
+
+Yang penting adalah **pemahaman terhadap masalah**. Saya paham betul aturan surcharge UPS karena itu bisnis saya. Pemahaman itu yang menjadi nilai.
+
+### Fokus pada "What", Bukan "How"
+
+Saya tidak perlu tahu bagaimana AI menulis `if ((weight > 25 && weight < 71) || packageType !== 'box')`. Saya hanya perlu tahu: **"Kapan AHS dikenakan?"**
+
+### Iterasi Itu Mudah
+
+Tidak ada takut salah atau "wah harus ngulang dari awal". Tinggal bilang apa yang kurang, langsung ditambahin.
+
+### 14 Poin Kompleksitas → 1 Prompt
+
+Requirement yang kalau dikerjakan manual mungkin butuh ratusan baris code, cukup ditulis dalam bentuk **daftar poin yang jelas.**
+
+---
+
+Yang perlu saya lakukan hanyalah **memahami masalah dengan baik dan menjelaskannya dengan jelas.** Sisanya? AI yang mengurus.
+
+Itu saja.
+
+---
+
+**Bab selanjutnya:** [Bab 5 — Seni "Mengadu" (Debugging Tanpa Pusing) →](/blog/bab-5-debugging-tanpa-pusing)

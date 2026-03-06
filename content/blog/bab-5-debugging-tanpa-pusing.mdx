@@ -1,0 +1,125 @@
+---
+title: 'Bab 5: Seni "Mengadu" — Debugging Tanpa Pusing'
+date: '2026-03-02'
+excerpt: 'Saat kode tidak jalan, jangan panik. Mengadu saja. Di dunia Antigravity, bug adalah alasan kita untuk memarahi (baca: memberi feedback) ke AI. 3 langkah "mengadu" yang efektif + tips revisi ala "Dosen Skripsi" dengan fitur Inline Comment.'
+author: 'Rifai'
+tags: ['Antigravity', 'AI', 'Debugging', 'Tips', 'Error Handling']
+coverImage: '/blog/antigravity/cover_final_v2.png'
+---
+
+*"Mas, pas saya klik tombol 'Hitung', kok gak muncul apa-apa ya?"*
+
+*"Mas, angkanya jadi NaN (Not a Number), kenapa nih?"*
+
+Selamat! Kamu baru saja bertemu dengan sahabat karib programmer: **BUG.**
+
+Di dunia coding tradisional, bug adalah musuh yang harus dibasmi dengan cara menelusuri ratusan baris kode, sakit kepala, dan kurang tidur.
+
+Di dunia **Antigravity**, bug adalah alasan kita untuk **memarahi (baca: memberi feedback) ke AI.**
+
+---
+
+## Mindset Debugging: "Ini Salah Siapa?"
+
+Ingat, kamu adalah **Project Manager**.
+
+Kalau bangunan miring, apakah kamu yang salah? Bukan. Tukangnya yang salah.
+
+Apakah kamu yang harus ambil semen dan benerin temboknya? **TIDAK.**
+
+Tugas kamu adalah **TERIAK.**
+
+*"WOI TUKANG! Temboknya miring 5 derajat ke kanan! Benerin sekarang!"*
+
+Prinsip yang sama berlaku di AI Coding. Kalau aplikasinya error, jangan coba benerin sendiri. Kembalikan ke AI dengan **bukti errornya.**
+
+---
+
+## 3 Langkah "Mengadu" yang Efektif
+
+### 1. Cari Tahu Pesan Error-nya (Jadilah Mata-Mata)
+
+Kalau web diklik diam saja, biasanya dia "teriak" di belakang layar.
+
+**Cara melihatnya:**
+- **Tekan tombol `F12` di keyboard.** (Atau Klik Kanan di layar → Inspect).
+- Pilih tab bernama **Console**.
+- Apakah ada tulisan warna **MERAH**?
+  - Contoh: `Uncaught TypeError: Cannot read property 'value' of null`
+  - Atau: `ReferenceError: calculate is not defined`
+
+![Debug Console F12](/blog/antigravity/debug_console_f12.png)
+
+### 2. Copy-Paste Error itu ke AI
+
+Jangan cuma bilang "Gak bisa". AI bukan dukun.
+
+Copy tulisan merah tadi, lalu chat ke AI:
+
+> "Bro, pas saya klik tombol hitung, muncul error ini di Console:
+>
+> `Uncaught TypeError: Cannot read property 'value' of null`
+>
+> Tolong perbaiki kodenya."
+
+### 3. Jelaskan Kronologinya (Jika Tidak Ada Pesan Error)
+
+Kadang gak ada error merah, tapi hasilnya ngaco (Logic Error).
+
+Ceritakan detailnya:
+
+> "Gak ada error merah sih. Tapi pas saya input Berat 30 kg, harusnya kena Additional Handling Surcharge (Rp 211.640), tapi kok di hasil perhitungannya Surcharge-nya masih 0?
+>
+> Coba cek lagi logika `if-else` kamu untuk berat di atas 25kg."
+
+---
+
+## Studi Kasus: Checkbox "Remote Area" yang Bandel
+
+Misalnya pas kamu centang checkbox Remote Area, eh total harganya gak nambah. Tetap ikut harga normal.
+
+**Jangan edit kodenya.** Langsung komplain:
+
+> "Halo. Saya udah coba kodenya.
+>
+> Masalahnya: Ketika checkbox 'Remote Area' saya centang, Total Harga tidak bertambah Rp 452.290.
+>
+> Sepertinya logika `if (checkbox.checked)` kamu belum jalan.
+>
+> Tolong perbaiki."
+
+AI akan langsung minta maaf, dan layar kiri (Code) akan bergerak sendiri memperbaiki logikanya.
+
+Tugas kamu? **Klik Accept lagi.**
+
+### Intinya:
+
+Di sini, **Skill Komunikasi > Skill Coding.**
+
+Semakin jago kamu menceritakan masalahnya (mengadu), semakin cepat aplikasinya jadi.
+
+Jangan takut salah. AI gak bakal marah kalau kamu komplain 100 kali pun. Malah dia seneng dikasih kerjaan.
+
+---
+
+## Tips Pro: Revisi Ala "Dosen Skripsi" (Tanda Biru)
+
+Kalau kamu mau lebih detail (sedikit effort), coba perhatikan di sebelah kiri (di area Chat atau Code).
+
+Terkadang ada **Kotak Biru Kecil** atau ikon komentar di samping teks/kode.
+
+![Fitur Inline Comment](/blog/antigravity/inline_comment_ui.png)
+
+Fitur apa ini?
+
+Ini ibarat kamu lagi **mencoret-coret skripsi**.
+
+- Klik tanda birunya.
+- Tulis komentarmu spesifik di baris itu. Misal: *"Bagian ini tolong warnanya diganti merah."* atau *"Rumus ini salah, harusnya dikali 10."*
+- AI akan memperbaiki **hanya bagian itu** tanpa mengacak-acak bagian lain yang sudah benar.
+
+Gunakan ini kalau kamu mau hasil yang super rapi dan presisi tanpa perlu menjelaskan panjang lebar di chat utama.
+
+---
+
+**Bab selanjutnya:** [Bab 6 — Go Live! Dari Laptop ke Internet →](/blog/bab-6-go-live-netlify)
