@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { getSortedPostsData } from '@/lib/blog';
+import { getSortedPostsData, type BlogPostMeta } from '@/lib/blog';
 
 export const metadata = {
     title: 'Blog | ZenSheet',
