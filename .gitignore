@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# ebook source files (large, not needed in repo)
+/ebook-full-package/
