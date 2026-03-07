@@ -1,8 +1,14 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import dynamic from "next/dynamic";
 import { CheckCircle, ShoppingCart, MessageCircle, Info } from "lucide-react";
-import ProductDetailModal from "./ProductDetailModal";
+
+// Lazy-load modal — only downloaded when user clicks a product (not on initial page load)
+const ProductDetailModal = dynamic(() => import("./ProductDetailModal"), {
+    ssr: false,
+    loading: () => null,
+});
 
 const products = [
     {
