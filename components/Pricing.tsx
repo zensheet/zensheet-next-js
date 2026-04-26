@@ -12,7 +12,7 @@ export default function Pricing() {
                         Paket Branding Digital UMKM
                     </h2>
                     <p className="text-slate-500 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
-                        Punya aplikasi canggih masa belum punya website? Pilih paket website sesuai budget Anda.
+                        Kami menyediakan solusi yang dipersonalisasi sesuai kebutuhan bisnis Anda. Hubungi kami untuk konsultasi lebih lanjut.
                     </p>
                 </div>
 
@@ -21,8 +21,9 @@ export default function Pricing() {
                     <div className="bg-white rounded-2xl p-8 border border-slate-200">
                         <div className="mb-6">
                             <div className="mb-4">
-                                <span className="text-4xl font-serif font-bold text-slate-900">Rp 350.000</span>
-                                <span className="text-lg text-slate-400 line-through ml-3 decoration-slate-400">Rp 499.000</span>
+                                <span className="text-2xl font-serif font-bold text-slate-900 italic">Harga Hubungi Kami</span>
+                                {/* <span className="text-4xl font-serif font-bold text-slate-900">Rp 350.000</span>
+                                <span className="text-lg text-slate-400 line-through ml-3 decoration-slate-400">Rp 499.000</span> */}
                             </div>
                             <p className="text-sky-600 text-xs font-bold mb-4">*Sudah Termasuk Domain .MY.ID + Hosting</p>
                             <p className="text-slate-600 text-sm leading-relaxed">
@@ -54,8 +55,8 @@ export default function Pricing() {
                             </li>
                         </ul>
 
-                        <a href="https://wa.me/6281290650963?text=Halo%20Admin,%20saya%20tertarik%20Paket%20Intro%20Rp350rb" className="block w-full py-3 bg-white hover:bg-slate-50 text-slate-900 font-bold text-center rounded-xl border border-slate-200 transition">
-                            Pilih Intro
+                        <a href="https://wa.me/6281290650963?text=Halo%20Admin,%20saya%20tertarik%20Paket%20Intro" className="block w-full py-3 bg-white hover:bg-slate-50 text-slate-900 font-bold text-center rounded-xl border border-slate-200 transition">
+                            Konsultasi Paket
                         </a>
                     </div>
 
@@ -63,8 +64,9 @@ export default function Pricing() {
                     <div className="bg-[#0f3d3e] text-white rounded-2xl p-8 shadow-2xl relative">
                         <div className="mb-6">
                             <div className="mb-4">
-                                <span className="text-4xl font-serif font-bold text-white">Rp 999.000</span>
-                                <span className="text-lg text-slate-400 line-through ml-3 decoration-slate-500">Rp 1.500.000</span>
+                                <span className="text-2xl font-serif font-bold text-white italic">Harga Hubungi Kami</span>
+                                {/* <span className="text-4xl font-serif font-bold text-white">Rp 999.000</span>
+                                <span className="text-lg text-slate-400 line-through ml-3 decoration-slate-500">Rp 1.500.000</span> */}
                             </div>
                             <p className="text-[#3b8f88] text-xs font-bold mb-4 uppercase tracking-wider">*Sudah Termasuk Domain .COM + Hosting</p>
                             <p className="text-slate-300 text-sm leading-relaxed">
@@ -123,8 +125,8 @@ export default function Pricing() {
                             </li>
                         </ul>
 
-                        <a href="https://wa.me/6281290650963?text=Halo%20Admin,%20saya%20tertarik%20Paket%20Terima%20Beres%20Rp999rb" className="block w-full py-4 bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-bold text-center rounded-xl shadow-lg transition transform hover:-translate-y-1">
-                            Pesan "Terima Beres"
+                        <a href="https://wa.me/6281290650963?text=Halo%20Admin,%20saya%20tertarik%20Paket%20Terima%20Beres" className="block w-full py-4 bg-yellow-400 hover:bg-yellow-500 text-slate-900 font-bold text-center rounded-xl shadow-lg transition transform hover:-translate-y-1">
+                            Tanya Penawaran Paket
                         </a>
                     </div>
                 </div>

@@ -37,13 +37,13 @@ export default function OtherProducts() {
                                 Panduan "gila" membuat 10 aplikasi logistik/bisnis dalam 1 bulan hanya bermodal AI. <b>Studi kasus nyata.</b>
                             </p>
                             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start pt-2">
-                                <div className="text-3xl font-extrabold text-gray-900">Rp 50rb</div>
+                                {/* <div className="text-3xl font-extrabold text-gray-900">Rp 50rb</div> */}
                                 <a
-                                    href="http://lynk.id/exportimport/gg7z18l170y1/checkout/"
+                                    href="https://wa.me/6281290650963?text=Halo%20ZenSheet,%20saya%20mau%20tanya%20penawaran%20untuk%20Ebook%20Antigravity"
                                     target="_blank"
                                     className="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-bold rounded-xl transition shadow-lg shadow-indigo-500/30 flex items-center gap-2"
                                 >
-                                    <ShoppingCart className="w-4 h-4" /> Beli Sekarang
+                                    <ShoppingCart className="w-4 h-4" /> Tanya Penawaran
                                 </a>
                             </div>
                         </div>

@@ -11,9 +11,9 @@ export default function About() {
                         <div className="flex justify-center mb-6">
                             <Download className="w-8 h-8 text-slate-700" strokeWidth={1.5} />
                         </div>
-                        <h3 className="text-xl font-bold text-[#0B1221]">Instant Clarity</h3>
+                        <h3 className="text-xl font-bold text-[#0B1221]">Expert Consultation</h3>
                         <p className="text-slate-500 leading-relaxed max-w-xs mx-auto">
-                            Akses langsung ke tools Anda setelah pembayaran. Mulai menata hidup detik ini juga.
+                            Dapatkan masukan langsung dari ahli untuk efisiensi sistem operasional bisnis Anda.
                         </p>
                     </div>
 
@@ -22,9 +22,9 @@ export default function About() {
                         <div className="flex justify-center mb-6">
                             <Smartphone className="w-8 h-8 text-slate-700" strokeWidth={1.5} />
                         </div>
-                        <h3 className="text-xl font-bold text-[#0B1221]">Anywhere Peace</h3>
+                        <h3 className="text-xl font-bold text-[#0B1221]">Anywhere Access</h3>
                         <p className="text-slate-500 leading-relaxed max-w-xs mx-auto">
-                            Desain responsif yang indah, akses dari mana saja dengan perasaan tenang.
+                            Aplikasi kustom yang dapat diakses dari perangkat apa pun, kapan pun Anda membutuhkannya.
                         </p>
                     </div>
 
@@ -33,9 +33,9 @@ export default function About() {
                         <div className="flex justify-center mb-6">
                             <ShieldCheck className="w-8 h-8 text-slate-700" strokeWidth={1.5} />
                         </div>
-                        <h3 className="text-xl font-bold text-[#0B1221]">Secure & Trusted</h3>
+                        <h3 className="text-xl font-bold text-[#0B1221]">Custom Solution & Support</h3>
                         <p className="text-slate-500 leading-relaxed max-w-xs mx-auto">
-                            Transaksi aman via Lynk.id. Privasi dan keamanan data Anda adalah prioritas.
+                            Solusi personal yang didesain khusus. Privasi dan keamanan data Anda adalah prioritas utama kami.
                         </p>
                     </div>
                 </div>

@@ -205,21 +205,21 @@ export default function ProductList() {
                                         ))}
                                     </ul>
 
-                                    <div className="flex items-center gap-3 mb-6">
+                                    {/* <div className="flex items-center gap-3 mb-6">
                                         {product.oldPrice && (
                                             <span className="text-gray-400 line-through text-sm font-medium">{product.oldPrice}</span>
                                         )}
                                         <span className={`text-2xl font-bold ${styles.text}`}>{product.price}</span>
-                                    </div>
+                                    </div> */}
 
                                     <div className="flex gap-2">
                                         <a
-                                            href={product.buyLink}
+                                            href={`https://wa.me/6281290650963?text=Halo%20ZenSheet,%20saya%20mau%20tanya%20penawaran%20untuk%20${product.title}`}
                                             target="_blank"
                                             className={`flex-1 py-3 px-4 bg-gray-900 ${styles.buttonHover} text-white font-bold rounded-xl text-center text-sm transition flex items-center justify-center gap-2`}
                                             onClick={(e) => e.stopPropagation()} // Prevent modal open on buy click
                                         >
-                                            <ShoppingCart className="w-4 h-4" /> Beli
+                                            <ShoppingCart className="w-4 h-4" /> Tanya Penawaran
                                         </a>
                                         <a
                                             href={`https://wa.me/6281290650963?text=Halo%20ZenSheet,%20mau%20tanya%20${product.title}`}

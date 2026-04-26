@@ -10,12 +10,12 @@ export default function CTA() {
                     Miliki aplikasi ZenSheet sekarang. Sekali bayar, milik selamanya. Tanpa biaya langganan bulanan.
                 </p>
                 <a
-                    href="https://wa.me/6281234567890"
+                    href="https://wa.me/6281290650963"
                     className="inline-flex items-center gap-3 px-10 py-5 bg-teal-500 hover:bg-teal-400 text-white font-bold text-xl rounded-full shadow-lg shadow-teal-500/30 transition transform hover:scale-105"
                 >
-                    <ShoppingCart className="w-6 h-6" /> Beli Aplikasi Sekarang
+                    <ShoppingCart className="w-6 h-6" /> Konsultasi Sekarang
                 </a>
-                <p className="mt-6 text-sm text-gray-500">Garansi Support • Instalasi Mudah • 100% Aman</p>
+                <p className="mt-6 text-sm text-gray-500 uppercase tracking-widest font-bold">Custom Solution & Support</p>
             </div>
         </section>
     );

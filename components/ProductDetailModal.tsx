@@ -173,7 +173,7 @@ function AntigravityDetails() {
 
                 <div className="mt-8">
                     <a href="http://lynk.id/exportimport/gg7z18l170y1/checkout/" target="_blank" className="inline-block px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1">
-                        Download Full Ebook (Rp 50rb)
+                        Download Full Ebook
                     </a>
                     <p className="text-sm text-slate-400 mt-4">Lifetime Updates • Studi Kasus Video • Prompt Library</p>
                 </div>
@@ -436,12 +436,12 @@ function GenericDetails({ product }: { product: any }) {
                         ))}
                     </ul>
                     <div className="pt-4 flex items-center gap-4">
-                        <span className="text-3xl font-bold text-gray-900">{product.price}</span>
-                        {product.oldPrice && <span className="text-gray-400 line-through font-medium">{product.oldPrice}</span>}
+                        {/* <span className="text-3xl font-bold text-gray-900">{product.price}</span>
+                        {product.oldPrice && <span className="text-gray-400 line-through font-medium">{product.oldPrice}</span>} */}
                     </div>
                     <div className="pt-4">
-                        <a href={product.buyLink} target="_blank" className="inline-flex items-center gap-2 px-8 py-4 bg-gray-900 text-white font-bold rounded-xl hover:bg-gray-800 transition">
-                            Beli Sekarang
+                        <a href={`https://wa.me/6281290650963?text=Halo%20ZenSheet,%20saya%20tertarik%20dengan%20${product.title}.%20Boleh%20tanya%20detailnya?`} target="_blank" className="inline-flex items-center gap-2 px-8 py-4 bg-gray-900 text-white font-bold rounded-xl hover:bg-gray-800 transition">
+                            Tanya Penawaran
                         </a>
                     </div>
                 </div>
