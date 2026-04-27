@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import ProductList from "@/components/ProductList";
+import Portfolio from "@/components/Portfolio";
 import ServiceBanner from "@/components/ServiceBanner";
 import Pricing from "@/components/Pricing";
 import ComparisonTable from "@/components/ComparisonTable";
@@ -14,6 +15,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <ProductList />
+      <Portfolio />
       <ServiceBanner />
       <Pricing />
       <ComparisonTable />

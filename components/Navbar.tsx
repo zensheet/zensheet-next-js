@@ -26,6 +26,9 @@ export default function Navbar() {
                     <a href="#products" className="text-sm font-medium text-gray-600 hover:text-teal-600 transition">
                         Produk
                     </a>
+                    <a href="#portfolio" className="text-sm font-medium text-gray-600 hover:text-teal-600 transition">
+                        Portofolio
+                    </a>
                     <a href="#features" className="text-sm font-medium text-gray-600 hover:text-teal-600 transition">
                         Keunggulan
                     </a>
@@ -57,6 +60,9 @@ export default function Navbar() {
                 <div className="md:hidden absolute top-16 left-0 w-full bg-white border-b border-gray-100 shadow-xl p-4 flex flex-col gap-4 animate-in slide-in-from-top-2">
                     <a href="#products" className="block py-2 text-gray-600 font-medium" onClick={() => setIsOpen(false)}>
                         Produk
+                    </a>
+                    <a href="#portfolio" className="block py-2 text-gray-600 font-medium" onClick={() => setIsOpen(false)}>
+                        Portofolio
                     </a>
                     <a href="#features" className="block py-2 text-gray-600 font-medium" onClick={() => setIsOpen(false)}>
                         Keunggulan
