@@ -19,6 +19,7 @@ const products = [
         oldPrice: "Rp 99.000",
         image: "/images/mockup_book_sitting.png",
         color: "indigo",
+        hidden: true, // 👈 Sementara disembunyikan — hapus baris ini untuk menampilkan lagi
         features: [
             "Mindset 'Antigravity Project Manager'",
             "Koleksi Prompt 'Zero to Deploy'",
@@ -171,7 +172,7 @@ export default function ProductList() {
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {products.map((product) => {
+                    {products.filter((p) => !p.hidden).map((product) => {
                         const styles = colorMap[product.color] || colorMap.gray;
                         return (
                             <div

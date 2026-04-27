@@ -15,8 +15,10 @@ export default function OtherProducts() {
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                    {/* Ebook Card */}
+                {/* 👇 Grid jadi 1 kolom sementara ebook disembunyikan */}
+                <div className="grid md:grid-cols-1 gap-8 max-w-2xl mx-auto">
+                    {/* Ebook Card — sementara disembunyikan. Uncomment blok di bawah untuk menampilkan lagi */}
+                    {/*
                     <div className="group bg-indigo-50 hover:bg-indigo-100 rounded-3xl p-8 flex flex-col md:flex-row gap-8 items-center shadow-lg border border-indigo-100 transition duration-300">
                         <div className="relative shrink-0">
                             <div className="absolute inset-0 bg-indigo-600 blur-xl opacity-20 rounded-full"></div>
@@ -37,7 +39,6 @@ export default function OtherProducts() {
                                 Panduan "gila" membuat 10 aplikasi logistik/bisnis dalam 1 bulan hanya bermodal AI. <b>Studi kasus nyata.</b>
                             </p>
                             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center md:justify-start pt-2">
-                                {/* <div className="text-3xl font-extrabold text-gray-900">Rp 50rb</div> */}
                                 <a
                                     href="https://wa.me/6281290650963?text=Halo%20ZenSheet,%20saya%20mau%20tanya%20penawaran%20untuk%20Ebook%20Antigravity"
                                     target="_blank"
@@ -48,6 +49,7 @@ export default function OtherProducts() {
                             </div>
                         </div>
                     </div>
+                    */}
 
                     {/* Service Card */}
                     <div className="group bg-teal-50 hover:bg-teal-100 rounded-3xl p-8 flex flex-col md:flex-row gap-8 items-center shadow-lg border border-teal-100 transition duration-300">
@@ -62,7 +64,7 @@ export default function OtherProducts() {
                                 <h3 className="text-2xl font-bold text-gray-900 leading-tight">Jasa Aplikasi Custom</h3>
                             </div>
                             <p className="text-sm text-gray-600">
-                                Butuh solusi instan & powerful? Saya buatkan aplikasi terintegrasi <b>Google Sheets / Database</b> untuk
+                                Butuh solusi instan &amp; powerful? Saya buatkan aplikasi terintegrasi <b>Google Sheets / Database</b> untuk
                                 bisnis Anda.
                             </p>
                             <div className="pt-2">
