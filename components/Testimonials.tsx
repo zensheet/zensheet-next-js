@@ -17,7 +17,7 @@ const testimonials = [
   },
   {
     name: "Faisal",
-    role: "HRGA - MSS",
+    role: "HRGA Manager - MSS",
     content: "Dari sisi penggunaan, user friendly banget. UI design yang OK, UX design sesuai ekspektasi karena komunikasi dengan developer yang selalu di bangun 2 arah. Sebagai user, kita sudah punya gambaran besar mengenai goals dan developer bisa nerjemahin kedalam aplikasi ini. Layout, cara kerja (offline/ online), fungsionalitas bener bener tersaji sesuai dengan ekspektasi. Harga juga terjangkau.",
     initial: "F"
   }
