@@ -7,6 +7,7 @@ import ServiceBanner from "@/components/ServiceBanner";
 import Pricing from "@/components/Pricing";
 import ComparisonTable from "@/components/ComparisonTable";
 import FAQ from "@/components/FAQ";
+import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <ProductList />
       <Portfolio />
+      <Testimonials />
       <ServiceBanner />
       <Pricing />
       <ComparisonTable />
