@@ -14,6 +14,12 @@ const testimonials = [
     role: "Owner Atrex Force",
     content: "Pak Rifai sangat membantu dalam pengembangan platform digital kami. Responnya cepat dan tepat sasaran sesuai kebutuhan perusahaan. Kami sangat merekomendasikan kemampuan beliau dalam membangun skala digitalisasi (scale-up), baik untuk sektor B2B maupun SME/UMKM.",
     initial: "A"
+  },
+  {
+    name: "Faisal",
+    role: "HRGA - MSS",
+    content: "Dari sisi penggunaan, user friendly banget. UI design yang OK, UX design sesuai ekspektasi karena komunikasi dengan developer yang selalu di bangun 2 arah. Sebagai user, kita sudah punya gambaran besar mengenai goals dan developer bisa nerjemahin kedalam aplikasi ini. Layout, cara kerja (offline/ online), fungsionalitas bener bener tersaji sesuai dengan ekspektasi. Harga juga terjangkau.",
+    initial: "F"
   }
 ];
 
@@ -33,7 +39,7 @@ export default function Testimonials() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {testimonials.map((t, index) => (
             <div key={index} className="bg-gray-50 rounded-3xl p-8 md:p-10 border-2 border-gray-100 shadow-sm relative flex flex-col h-full">
               <div className="absolute -top-4 -left-2 text-teal-500 opacity-20">
@@ -41,7 +47,7 @@ export default function Testimonials() {
               </div>
               
               <div className="relative z-10 flex flex-col h-full">
-                <p className="text-gray-700 text-lg italic leading-relaxed mb-8 flex-1">
+                <p className="text-gray-700 text-base md:text-lg italic leading-relaxed mb-8 flex-1">
                   &quot;{t.content}&quot;
                 </p>
                 
