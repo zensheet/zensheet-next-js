@@ -5,6 +5,30 @@ import { ExternalLink, Globe, Monitor, FileText, ShoppingBag, Truck, Shirt } fro
 
 const projects = [
     {
+        id: "cavinnisanitary",
+        title: "Cavinni Sanitary",
+        description: "Website e-commerce dan katalog produk sanitary premium dengan desain modern, dilengkapi sistem pemesanan via WhatsApp dan integrasi Supabase.",
+        category: "Website",
+        tags: ["E-Commerce", "Next.js", "Sanitary"],
+        image: "/images/portfolio/cavinni.webp",
+        link: "https://cavinnisanitary.com",
+        color: "teal",
+        icon: ShoppingBag,
+        isLive: true,
+    },
+    {
+        id: "mdsgensa",
+        title: "MDS Gensa",
+        description: "Website company profile profesional untuk MDS Gensa. Menampilkan layanan, portfolio, dan informasi perusahaan secara interaktif dan responsif.",
+        category: "Website",
+        tags: ["Company Profile", "Corporate", "Web Design"],
+        image: "/images/portfolio/mdsgensa.webp",
+        link: "https://mdsgensa.com",
+        color: "blue",
+        icon: Globe,
+        isLive: true,
+    },
+    {
         id: "kelambies",
         title: "Kelambies.com",
         description: "Website e-commerce pakaian anak premium. Fitur toko online lengkap dengan katalog produk, cart, dan sistem checkout.",
