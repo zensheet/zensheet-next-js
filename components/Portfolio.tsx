@@ -5,6 +5,18 @@ import { ExternalLink, Globe, Monitor, FileText, ShoppingBag, Truck, Shirt } fro
 
 const projects = [
     {
+        id: "gbuexpress",
+        title: "GBU Express",
+        description: "Website company profile dan layanan logistik profesional untuk GBU Express.",
+        category: "Website",
+        tags: ["Logistics", "Company Profile", "Web Design"],
+        image: "/images/portfolio/gbuexpress.webp",
+        link: "https://gbuexpress.com",
+        color: "blue",
+        icon: Truck,
+        isLive: true,
+    },
+    {
         id: "cavinnisanitary",
         title: "Cavinni Sanitary",
         description: "Website e-commerce dan katalog produk sanitary premium dengan desain modern, dilengkapi sistem pemesanan via WhatsApp dan integrasi Supabase.",
